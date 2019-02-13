@@ -17,6 +17,7 @@ public class DB_SQLite extends SQLiteOpenHelper {
             Esquema.Gps.COLUMN_NAME_ID + " " + Esquema.Gps.COLUMN_TYPE_ID + " PRIMARY KEY AUTOINCREMENT, " +
             Esquema.Gps.COLUMN_NAME_LATITUD + " " + Esquema.Gps.COLUMN_TYPE_LATITUD + ", " +
             Esquema.Gps.COLUMN_NAME_LONGITUD + " " + Esquema.Gps.COLUMN_TYPE_LONGITUD + ", " +
+            Esquema.Gps.COLUMN_NAME_LUGAR + " " + Esquema.Gps.COLUMN_TYPE_LUGAR + ", " +
             Esquema.Gps.COLUMN_NAME_TIPO + " " + Esquema.Gps.COLUMN_TYPE_TIPO + ")";
 
     // " FOREIGN KEY (" + Esquema.Producto.COLUMN_NAME_ID + ") REFERENCES " + Esquema.Seccion.TABLE_NAME + "(" + Esquema.Seccion.COLUMN_NAME_ID + ")" +

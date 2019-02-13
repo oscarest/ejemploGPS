@@ -66,8 +66,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         edit1 = findViewById(R.id.txtLatitud);
         edit2 = findViewById(R.id.txtLongitud);
         edit3 = findViewById(R.id.textView2);
-        txtLatitud = findViewById(R.id.txtLatitud);
-        txtLongitud = findViewById(R.id.txtLongitud);
 
         locationManager = (LocationManager) getSystemService(Service.LOCATION_SERVICE);
         isGPS = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
@@ -82,11 +80,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             {
                 if(radio1.isChecked())
                 {
-                    Gps g = new Gps(edit3.getText().toString(), Double.parseDouble(edit2.getText().toString()), Double.parseDouble(edit1.getText().toString()), radio1.getText().toString());
+                    Gps g = new Gps(edit3.getText().toString(), Float.parseFloat(edit2.getText().toString()), Float.parseFloat(edit1.getText().toString()), radio1.getText().toString());
                 }
                 else
                 {
-                    Gps g = new Gps(edit3.getText().toString(), Double.parseDouble(edit2.getText().toString()), Double.parseDouble(edit1.getText().toString()), radio2.getText().toString());
+                    Gps g = new Gps(edit3.getText().toString(), Float.parseFloat(edit2.getText().toString()), Float.parseFloat(edit1.getText().toString()), radio2.getText().toString());
                 }
 
             }
@@ -103,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     canGetLocation = false;
                 }
             }
-            getLocation();
         }
     }
 
@@ -241,8 +238,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     }
 
     private void updateUI(Location loc) {
-        txtLatitud.setText(Double.toString(loc.getLatitude()));
-        txtLongitud.setText(Double.toString(loc.getLongitude()));
+        edit1.setText(Double.toString(loc.getLatitude()));
+        edit2.setText(Double.toString(loc.getLongitude()));
+        edit3.setText("papalla");
     }
 
     @Override

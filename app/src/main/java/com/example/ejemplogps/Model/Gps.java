@@ -5,17 +5,17 @@ public class Gps
     private Long id;
     private String tipo;
     private String lugar;
-    private Double latitud;
-    private Double longitud;
+    private Float latitud;
+    private Float longitud;
 
     public Gps() {
         this.id = null;
         this.lugar = "";
-        this.latitud = 0.0;
-        this.longitud = 0.0;
+        this.latitud = null;
+        this.longitud = null;
     }
 
-    public Gps(String lugar, Double latitud, Double longitud, String tipo) {
+    public Gps(String lugar, Float latitud, Float longitud, String tipo) {
         this.id = null;
         this.lugar = lugar;
         this.latitud = latitud;
@@ -45,19 +45,19 @@ public class Gps
         this.tipo = tipo;
     }
 
-    public Double getLatitud() {
+    public Float getLatitud() {
         return latitud;
     }
 
-    public void setLatitud(Double latitud) {
+    public void setLatitud(Float latitud) {
         this.latitud = latitud;
     }
 
-    public Double getLongitud() {
+    public Float getLongitud() {
         return longitud;
     }
 
-    public void setLongitud(Double longitud) {
+    public void setLongitud(Float longitud) {
         this.longitud = longitud;
     }
 

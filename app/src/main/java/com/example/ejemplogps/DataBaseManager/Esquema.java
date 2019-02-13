@@ -16,8 +16,8 @@ public class Esquema {
         public static final String COLUMN_NAME_LUGAR = "lugar";
         public static final String COLUMN_NAME_TIPO = "tipo";
         public static final String COLUMN_TYPE_ID = "INTEGER";
-        public static final String COLUMN_TYPE_LATITUD = "DOUBLE";
-        public static final String COLUMN_TYPE_LONGITUD = "DOUBLE";
+        public static final String COLUMN_TYPE_LATITUD = "FLOAT";
+        public static final String COLUMN_TYPE_LONGITUD = "FLOAT";
         public static final String COLUMN_TYPE_LUGAR = "TEXT";
         public static final String COLUMN_TYPE_TIPO = "TEXT";
 
